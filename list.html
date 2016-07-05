@@ -12,7 +12,7 @@
 <!--List-->
 <ul class = "toDo">
   <li class = "toDo-thing" ng-repeat = "thing in things">{{thing.title}}</li>
-    <span class = "toDo-thing-delete" ng-click = "deleteThing($index)"></span>
+  <span class = "toDo-thing-delete" ng-click = "deleteThing($index)">x</span>
     <span class = "toDo-thing-input">{{thing.title}}</span>
   </li>
 </ul>
