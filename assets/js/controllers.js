@@ -16,23 +16,22 @@ mainApp.controller('thingsCtrl', function($scope){
     $scope.things.splice(index, 1); //remove item from index
   }
 
+  $scope.addNotes = function(){
+    $scope.things.push({'description': $scope.newThing.title, 'done':false})
+    $scope.newThing.title = ''
+  }
 
+  $scope.checkThing = function(){
+    $scope.things.css('color', '$headerred');
+  }
 
 });
 
-/*--------------failed delete attempt-----------------------------------*/
 
-// mainApp.controller('deleteCtrl', function($scope){
-//
-//   $scope.things = []
-//
-//   $scope.deleteThing = function(){
-//     $scope.skills.splice(index, 1);
-//    }
-//
-// console.log('delete ready')
-
-//nghover on li show x to delete item
-
-//ng double click
+//ng double click--can call functions
   //dropdown input, add details
+
+//DONE //add checkbox to li's. string type of checkbox model allows the checkbox to bind to data, according to angular's documenttion.
+//apparently the <input type = "checkbox"> html was ready to go, right out of the box.
+
+//event listener in ng: turn checked off item blue

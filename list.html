@@ -1,20 +1,24 @@
 <!--Code based on a codepen by Francesca, https://codepen.io/gfrancesca/pen/gbpoxQ-->
-<div class = "wrapper">
-  <div ng-controller = "thingsCtrl">
-    <h1> stuff / things </h1>
+<div class="wrapper">
+    <div ng-controller="thingsCtrl">
+        <h1> stuff / things </h1>
 
 
-<!-- Add Thing-->
-<form class = "addThings" ng-submit = "addThing()">
-  <input type = "text" name = "newThing" ng-model= "newThing"/>
-    <span class = "plusButton"> add </span>
+        <!-- Add Thing-->
+        <form class="addThings" ng-submit="addThing()">
+            <input type="text" name="newThing" ng-model="newThing" />
+            <span class="plusButton"> add </span>
 
-<!--List-->
-<ul class = "toDo">
-  <li class = "toDo-thing" ng-repeat = "thing in things">{{thing.title}}</li>
-  <span class = "toDo-thing-delete" ng-click = "deleteThing($index)">x</span>
-    <span class = "toDo-thing-input">{{thing.title}}</span>
-  </li>
-</ul>
+            <!--List-->
+            <ul class="toDo">
+                <li class="toDo-thing" ng-repeat="thing in things" ng-class = "{blued : checked,}">
+                    <input class="toDo-thing-checkbox" type="checkbox" ng-model="checked" ng-click="checkThing"></input>{{thing.title}}
+                    <span class="toDo-thing-delete" ng-click="deleteThing($index)"><i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </span>
+                </li>
+                <span class="toDo-thing-input" ng-dblclick="addNotes">{{thing.description}}</span>
+
+                </li>
+            </ul>
     </div>
-  </div>
+</div>
