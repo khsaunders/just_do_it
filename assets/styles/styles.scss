@@ -1,0 +1,40 @@
+/*variables*/
+$light-gray: #e8e8e8;
+$charcoal: #161817;
+$blue: #2574BE;
+
+body{
+  background-color: $light-gray;
+  color: $charcoal;
+  font-family: Alegreya, sans-serif;
+  letter-spacing: 2px;
+}
+
+.wrapper{
+  width: 70%;
+  padding: 10% 40%;
+}
+
+h1{
+  font-size: 2em;
+  letter-spacing: 3px;
+  margin-bottom: 5%;
+}
+
+.plusButton{
+  font-size: 1em;
+  padding: .35em 1em;
+  margin: 0 3%;
+  color: $light-gray;
+  background-color: $blue;
+}
+
+input{
+  height: 1.5em;
+  outline-color: $blue;
+  letter-spacing: 1.5px;
+}
+
+li{
+  border-bottom: solid 2px $charcoal;
+}
