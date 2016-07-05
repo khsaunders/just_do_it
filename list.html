@@ -1,16 +1,20 @@
 <!--Code based on a codepen by Francesca, https://codepen.io/gfrancesca/pen/gbpoxQ-->
 <div class = "wrapper">
   <div ng-controller = "thingsCtrl">
-    <h1> stuff & things </h1>
+    <h1> stuff / things </h1>
 
 
-<!--Add Thing-->
+<!-- Add Thing-->
 <form class = "addThings" ng-submit = "addThing()">
   <input type = "text" name = "newThing" ng-model= "newThing"/>
     <span class = "plusButton"> add </span>
 
 <!--List-->
 <ul class = "toDo">
-  <li class = "toDo-thing" ng-repeat = "thing in things"><button type = checkbox></button>{thing.done} </li>
+  <li class = "toDo-thing" ng-repeat = "thing in things">{{thing.title}}</li>
+    <span class = "toDo-thing-delete" ng-click = "deleteThing($index)"></span>
+    <span class = "toDo-thing-input">{{thing.title}}</span>
+  </li>
+</ul>
     </div>
   </div>

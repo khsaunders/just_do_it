@@ -1,6 +1,7 @@
 /*variables*/
-$light-gray: #e8e8e8;
+$light-gray: #C8DEF5;
 $charcoal: #161817;
+$headerred: #F33229;
 $blue: #2574BE;
 
 body{
@@ -19,6 +20,7 @@ h1{
   font-size: 2em;
   letter-spacing: 3px;
   margin-bottom: 5%;
+  color: $headerred;
 }
 
 .plusButton{
@@ -31,10 +33,13 @@ h1{
 
 input{
   height: 1.5em;
-  outline-color: $blue;
+  outline: none;
   letter-spacing: 1.5px;
+  border-style: none;
 }
 
 li{
+  padding: 2%;
   border-bottom: solid 2px $charcoal;
+  width: 35%;
 }

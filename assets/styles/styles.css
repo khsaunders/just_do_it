@@ -1,6 +1,6 @@
 /*variables*/
 body {
-  background-color: #e8e8e8;
+  background-color: #C8DEF5;
   color: #161817;
   font-family: Alegreya, sans-serif;
   letter-spacing: 2px; }
@@ -12,21 +12,25 @@ body {
 h1 {
   font-size: 2em;
   letter-spacing: 3px;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  color: #F33229; }
 
 .plusButton {
   font-size: 1em;
   padding: .35em 1em;
   margin: 0 3%;
-  color: #e8e8e8;
+  color: #C8DEF5;
   background-color: #2574BE; }
 
 input {
   height: 1.5em;
-  outline-color: #2574BE;
-  letter-spacing: 1.5px; }
+  outline: none;
+  letter-spacing: 1.5px;
+  border-style: none; }
 
 li {
-  border-bottom: solid 2px #161817; }
+  padding: 2%;
+  border-bottom: solid 2px #161817;
+  width: 35%; }
 
 /*# sourceMappingURL=styles.css.map */
