@@ -11,7 +11,7 @@
 
             <!--List-->
             <ul class="toDo">
-                <li class="toDo-thing" ng-repeat="thing in things" ng-class = "{blued : checked,}">
+                <li class="toDo-thing" ng-repeat="thing in things" ng-class = "{blued : checked}">
                     <input class="toDo-thing-checkbox" type="checkbox" ng-model="checked" ng-click="checkThing"></input>{{thing.title}}
                     <span class="toDo-thing-delete" ng-click="deleteThing($index)"><i class="fa fa-times-circle-o" aria-hidden="true"></i>
                 </span>

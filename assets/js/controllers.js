@@ -21,9 +21,9 @@ mainApp.controller('thingsCtrl', function($scope){
     $scope.newThing.title = ''
   }
 
-  $scope.checkThing = function(){
-    $scope.things.css('color', '$headerred');
-  }
+  // $scope.checkThing = function(){
+  //   $scope.things.css('color', '$headerred');
+  // } //according to the angularjs documentation, this can be handled within the html
 
 });
 
@@ -34,4 +34,6 @@ mainApp.controller('thingsCtrl', function($scope){
 //DONE //add checkbox to li's. string type of checkbox model allows the checkbox to bind to data, according to angular's documenttion.
 //apparently the <input type = "checkbox"> html was ready to go, right out of the box.
 
-//event listener in ng: turn checked off item blue
+//DONE //event listener in ng: turn checked off item blue
+
+//add random quote generator. api documentation: https://theysaidso.com/api/#random
