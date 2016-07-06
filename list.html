@@ -1,7 +1,7 @@
 <!--Code based on a codepen by Francesca, https://codepen.io/gfrancesca/pen/gbpoxQ-->
 <div class="wrapper">
     <div ng-controller="thingsCtrl">
-        <h1> stuff / things </h1>
+        <h1> do it</h1>
 
 
         <!-- Add Thing-->
@@ -22,6 +22,6 @@
             </ul>
     </div>
     <div ng-controller="quotesCtrl">
-      <span name = "newQuote" ng-model = "newQuote"> </span>
+      <span name = "newQuote" ng-model = "newQuote"> {{quotes.quote}}</span>
 
 </div>

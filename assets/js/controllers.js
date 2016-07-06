@@ -29,19 +29,35 @@ mainApp.controller('thingsCtrl', function($scope){
 });
 
 mainApp.controller('quotesCtrl', function($scope, $http){ //initially forgot to add http to my scope; was getting 'undefined' error. this resolved it.
+  var url = ' http://localhost:3000/inspiration'
 
-  $http.get(' http://quotes.rest/qod.json').success(function(data){
-    $scope.newQuote=data;
+  $http.get(url).success(function(data){
+    $scope.quotes = data;
     console.log(data)
+    console.log(data.inspiration.quote.img);
+//successful api call. logs data successfully.
 
-  $scope.quotes = []
+// mainApp.controller('genQuoteCtrl', function($scope){
+    angular.forEach($scope.quotes, function(item){
+     return(item.contents);
 
-  $scope.quotes.push({'quote': $scope.newQuote, 'done': false})
-  $scope.newQuote = ''
+     console.log(item.contents.quotes);
 
-})
+      // $scope.quotes.push({'quote': $scope.newQuote, 'active': true})
+
+})      // $scope.newQuote = ''
 
 });
+
+
+
+  // $scope.quotes = []
+  //
+  // $scope.quotes.push({'quote': $scope.newQuote, 'active': true})
+  // $scope.newQuote = ''
+
+});
+
 
 
 
@@ -53,4 +69,6 @@ mainApp.controller('quotesCtrl', function($scope, $http){ //initially forgot to 
 
 //DONE //event listener in ng: turn checked off item blue
 
-//add random quote generator. api documentation: https://theysaidso.com/api/#random
+//DONE //add quote generator. api documentation: https://theysaidso.com/api/#random
+
+//randomize quotes, then append to page.

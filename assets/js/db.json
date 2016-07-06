@@ -1,0 +1,24 @@
+{
+  "inspiration": [
+  {
+    "quote":"DO IT, JUST DO IT. DON'T LET YOUR DREAMS BE DREAMS.",
+    "img":"assets/images/shia_forest.png"
+  },
+  {
+    "quote":"YESTERDAY, YOU SAID TOMORROW",
+    "img":"assets/images/shia_mountain.png"
+  },
+  {
+    "quote":"NOTHING IS IMPOSSIBLE",
+    "img":"assets/images/shia_space.png"
+  },
+  {
+    "quote":"IF YOU'RE TIRED OF STARTING OVER, STOP GIVING UP",
+    "img":"assets/images/shia_lions.png"
+  },
+  {
+    "quote":"YOU SHOULD GET TO THE POINT WHERE ANYONE ELSE WOULD QUIT",
+    "img":"assets/images/shia_jakku.png"
+  }
+  ]
+}
