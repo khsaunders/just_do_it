@@ -35,12 +35,15 @@ li {
   padding: 2%;
   border-bottom: solid 2px #161817;
   width: 35%; }
+  li input {
+    margin-right: 10%; }
 
 .fa-times-circle-o {
   float: right; }
 
 .blued {
   color: #2574BE;
-  border-bottom: solid 2px #2574BE; }
+  border-bottom: none;
+  text-decoration: line-through; }
 
 /*# sourceMappingURL=styles.css.map */
