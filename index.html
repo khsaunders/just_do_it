@@ -11,9 +11,33 @@
 </head>
 
 <body>
-    <div ng-app="mainApp">
-        <ng-view></ng-view>
-    </div>
+  <!--Code based on a codepen by Francesca, https://codepen.io/gfrancesca/pen/gbpoxQ-->
+  <div class="wrapper">
+      <div ng-controller="thingsCtrl">
+          <h1> do it</h1>
+
+
+          <!-- Add Thing-->
+          <form class="addThings" ng-submit="addThing()">
+              <input type="text" name="newThing" ng-model="newThing" />
+              <span class="plusButton" ng-click="addThing()"> add </span>
+
+              <!--List-->
+              <ul class="toDo">
+                  <li class="toDo-thing" ng-repeat="thing in things" ng-class = "{blued : checked}">
+                      <input class="toDo-thing-checkbox" type="checkbox" ng-model="checked" ng-click="checkThing"></input>{{thing.title}}
+                      <span class="toDo-thing-delete" ng-click="deleteThing($index)"><i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                  </span>
+                  </li>
+                  <span class="toDo-thing-input" ng-dblclick="addNotes">{{thing.description}}</span>
+
+                  </li>
+              </ul>
+      </div>
+      <div ng-controller="quotesCtrl">
+        <span name = "newQuote" ng-model = "newQuote"> {{quotes.quote}}</span>
+
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
