@@ -9,7 +9,6 @@ var mainApp = angular.module("mainApp", ['ngRoute']);
     })
 
     .otherwise({
-
     redirectTo: '/home'
     });
   }); //end of app routing
