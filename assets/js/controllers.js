@@ -29,7 +29,7 @@ mainApp.controller('thingsCtrl', function($scope){
 
 });
 
-//Shia LeBouf motivational quote generator 
+//Shia LeBouf motivational quote generator
 
 // mainApp.controller('quotesCtrl', function($scope, $http){ //initially forgot to add http to my scope; was getting 'undefined' error. this resolved it.
 //   var url = ' http://localhost:3000/inspiration'
@@ -48,9 +48,9 @@ mainApp.controller('thingsCtrl', function($scope){
 
       // $scope.quotes.push({'quote': $scope.newQuote, 'active': true})
 
-})      // $scope.newQuote = ''
+// })      // $scope.newQuote = ''
 
-});
+// });
 
 
 
@@ -59,7 +59,7 @@ mainApp.controller('thingsCtrl', function($scope){
   // $scope.quotes.push({'quote': $scope.newQuote, 'active': true})
   // $scope.newQuote = ''
 
-});
+// });
 
 
 
