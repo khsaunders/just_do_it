@@ -2,7 +2,7 @@
 var myApp =  angular.module("mainApp"); //this seemed to resolve errors about controllers 'getting undefined'
 mainApp.controller('thingsCtrl', function($scope){
 
-  $scope.things = [] //empty array
+  $scope.things = [] //empty array that to-do items will be pushed to
 
   // var thingText = $('input[class="toDo-thing-input"]').val(); unnecessary because of templating
 
@@ -13,7 +13,8 @@ mainApp.controller('thingsCtrl', function($scope){
 
   $scope.deleteThing = function(index){
 
-    $scope.things.splice(index, 1); //remove item from index
+     //remove item from to-do list
+    $scope.things.splice(index, 1);
   }
 
   $scope.addNotes = function(){
@@ -28,20 +29,22 @@ mainApp.controller('thingsCtrl', function($scope){
 
 });
 
-mainApp.controller('quotesCtrl', function($scope, $http){ //initially forgot to add http to my scope; was getting 'undefined' error. this resolved it.
-  var url = ' http://localhost:3000/inspiration'
+//Shia LeBouf motivational quote generator 
 
-  $http.get(url).success(function(data){
-    $scope.quotes = data;
-    console.log(data)
-    console.log(data.inspiration.quote.img);
-//successful api call. logs data successfully.
-
-// mainApp.controller('genQuoteCtrl', function($scope){
-    angular.forEach($scope.quotes, function(item){
-     return(item.contents);
-
-     console.log(item.contents.quotes);
+// mainApp.controller('quotesCtrl', function($scope, $http){ //initially forgot to add http to my scope; was getting 'undefined' error. this resolved it.
+//   var url = ' http://localhost:3000/inspiration'
+//
+//   $http.get(url).success(function(data){
+//     $scope.quotes = data;
+//     console.log(data)
+//     console.log(data.inspiration.quote.img);
+// //successful api call. logs data successfully.
+//
+// // mainApp.controller('genQuoteCtrl', function($scope){
+//     angular.forEach($scope.quotes, function(item){
+//      return(item.contents);
+//
+//      console.log(item.contents.quotes);
 
       // $scope.quotes.push({'quote': $scope.newQuote, 'active': true})
 
